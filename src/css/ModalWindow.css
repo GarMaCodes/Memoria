@@ -1,0 +1,180 @@
+/*VENTANA MODAL*/
+
+.modalWindow {
+  width: 30%;
+  height: 270px;
+  background-color: #eee;
+  border-radius: 10px;
+
+  padding: 3%;
+  padding-top: 1%;
+  padding-bottom: 4%;
+  position: fixed; /*Con absolute la ventana aparece al centro de la section, con fixed
+                       aparece al centro de la pantalla*/
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  margin: auto; /*Con esto se centra horizontal y verticalmente*/
+  transition: all 800ms;
+  z-index: 11;
+}
+
+.paragraph {
+  width: 90%;
+  height: 70%;
+  text-align: center;
+  margin: 0px auto;
+  /*border: 1px solid red;*/
+}
+
+.paragraph p {
+  font-family: "Helvetica", "Arial";
+  font-size: 30px;
+  color: #333;
+  height: auto;
+  margin-top: 20px;
+}
+
+.button {
+  width: 30%;
+  height: 30px;
+  background-color: violet;
+  font-family: "Helvetica", "Arial";
+  color: white;
+  text-align: center;
+  line-height: 30px;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  position: relative;
+  transition: all 300ms;
+}
+
+.button:hover {
+  background-color: rgb(126, 16, 126);
+  cursor: pointer;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background-color: transparent;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 50px;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.links .link {
+  font-family: "Helvetica", "Arial";
+  text-decoration: none;
+  font-size: 15px;
+  color: rgb(126, 16, 126);
+}
+
+.links .link:hover {
+  color: violet;
+}
+
+/*Responsive*/
+@media (max-width: 1024px) {
+  .modalWindow {
+    height: 330px;
+  }
+
+  .paragraph {
+    height: 60%;
+  }
+
+  .paragraph p {
+    font-size: 25px;
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 834px) {
+  .modalWindow {
+    height: 340px;
+  }
+
+  .paragraph p {
+    margin-top: 20px;
+  }
+
+  .button {
+    margin-top: 10px;
+  }
+
+  .links {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .modalWindow {
+    width: 40%;
+  }
+
+  .paragraph p {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 414px) {
+  .modalWindow {
+    width: 80%;
+    height: 315px;
+  }
+
+  .paragraph {
+    height: 50%;
+  }
+
+  .paragraph p {
+    font-size: 23px;
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 320px) {
+  .modalWindow {
+    height: 370;
+  }
+
+  .paragraph {
+    height: 50%;
+  }
+
+  .paragraph p {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 280px) {
+  .modalWindow {
+    height: 310px;
+  }
+
+  .paragraph {
+    height: 40%;
+  }
+
+  .button {
+    margin-top: 40px;
+  }
+
+  .paragraph p {
+    font-size: 18px;
+  }
+}
